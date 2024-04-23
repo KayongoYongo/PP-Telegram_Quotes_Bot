@@ -1,15 +1,13 @@
 import requests
 
-def get_quote(mode):
+def get_quotes(mode):
     """
     Description:
-        This function interacts with the api to retirieve information
-        about a word
+        This function interacts with the api to retrieve information
+        about a quote
 
     Args:
-        word: The target word we want
-        whatToGet: This can be information about the word such as synonyms,
-                antonyms, definitions etc.
+        mode: This can be random, today or image
     
     Return:
         A JSON response
@@ -25,6 +23,3 @@ def get_quote(mode):
         return response.json()
     else:
         return f"There is an error in the request"
-    
-mode = "random"
-print(f"{get_quote(mode)}")
