@@ -34,7 +34,7 @@ def get_quotes(mode_or_category):
         else:
             return f"There is an error in the request to zenquotes.io"
     else:
-        # The api key for 
+        # The api key for api-ninjas
         API_KEY = os.getenv('API_KEY')
 
         # Base Url for api-ninjas.com API
