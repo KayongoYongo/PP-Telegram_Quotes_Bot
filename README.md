@@ -31,7 +31,7 @@ as to make them private
 To get started with the bot, two things need to be installed. The python telegram bot and python.
 Run these two commands in the terminal so as to get started:
 ```
-pip install python-telegram-bot
+pip install pyTelegramBotAPI
 ```
 ```
 pip install python-dotenv
