@@ -2,8 +2,15 @@
 A simple telegram bot which shares inspirational quotes based off the user's prompts.
 
 # Description
-A simple telegram bot which shares quotes based off the user's prompts. The bot can return quotes from various categories such as happiness,
+A telegram bot which shares inspirational quotes based off the user's prompts. The bot can return quotes from various categories such as happiness,
 age, architechture etc. Additionally, there's an option of returning an image with quotes.
+
+# If you want to just use the bot, here's the link:
+Look up the name of the bot: (https://t.me/sam_telegram_quotes_bot).
+
+## Instructions:
+To get started with the bot, use the `/start` command.
+Note: In order to get the quotes, use `/mode` then the `category`. Otherwise, the bot will not work.
 
 # If you are getting started from scratch, here are the instructions:
 ## 1. Bot father
@@ -33,9 +40,6 @@ sudo apt-get install python3
 
 ## 5. Running the app
 In order to run the app, just type this command: `python telegram_bot_quotes.py`
-
-# If you just want to use the bot, here's the link:
-Look up the name of the bot: (https://t.me/sam_telegram_quotes_bot)
 
 ## Features
 ### 1. Bot Interaction
