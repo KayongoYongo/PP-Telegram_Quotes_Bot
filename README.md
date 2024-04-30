@@ -34,6 +34,9 @@ Run these two commands in the terminal so as to get started:
 pip install python-telegram-bot
 ```
 ```
+pip install python-dotenv
+```
+```
 sudo apt-get update
 sudo apt-get install python3
 ```
