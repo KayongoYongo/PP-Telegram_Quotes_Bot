@@ -64,6 +64,25 @@ def fetch_quotes(message, mode):
     """
     mode = message.text.lower()
 
+    # This list shows the expected output as shown above
+    expected_list = [
+        "today","random", "image", "age", "alone", "amazing", "anger", "architecture", "art", "attitude", "beauty", "best", "birthday",
+        "business", "car", "change", "communication", "computers", "cool", "courage", "dad", "dating", "death",
+        "design", "dreams", "education", "environmental", "equality", "experience", "failure", "faith", "family",
+        "famous", "fear", "fitness", "food", "forgiveness", "freedom", "friendship", "funny", "future", "god",
+        "good", "government", "graduation", "great", "happiness", "health", "history", "home", "hope", "humor",
+        "imagination", "inspirational", "intelligence", "jealousy", "knowledge", "leadership", "learning", "legal",
+        "life", "love", "marriage", "medical", "men", "mom", "money", "morning", "movies", "success"
+    ]
+
+    # Generate options text dynamically
+    categories_text = ", ".join(expected_list)
+
+    # Handle the case of no provided information
+    if mode not in expected_list:
+        bot.send_message(message.chat.id, "The bot cannot retrieve the provided category. Please select one from the provided list")
+        bot.send_message(message.chat.id, f"List: {categories_text}")
+
     if mode == 'random' or mode == 'today':
         data = get_quotes(mode)
 
@@ -98,11 +117,11 @@ def fetch_quotes(message, mode):
         # retrieve the JSON from the list
         quoted_data = category_data[0]
 
-        
+        # Assign the retrieved data to variables
         quote = quoted_data.get('quote')
         author = quoted_data.get('author')
 
-            # Handles the case of existing quote and author
+        # Handles the case of existing quote and author
         if quote and author:
             quote_message = f"*Quote:* {quote}\n*Author:* {author}"
             bot.send_message(message.chat.id, "Here's the quote and author:")
