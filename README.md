@@ -1,5 +1,5 @@
 # Telegram Quotes Bot
-A simple telegram bot which shares quotes based off the user's prompts.
+A simple telegram bot which shares inspirational quotes based off the user's prompts.
 
 # Description
 A simple telegram bot which shares quotes based off the user's prompts. The bot can return quotes from various categories such as happiness,
@@ -61,7 +61,17 @@ When entering information, the bot has been modified so as to covert each string
 Since the bot is built using synchronous programming, it will struggle to deal with multiple concurrent requests.
 
 # Visuals
+Here is a sample on quotes for **today**:
+![image](https://github.com/KayongoYongo/PP-Telegram_Quotes_Bot/assets/111020589/fe4ae4fd-807f-4d5d-8399-bb32d272d3e4)
 
+Here is a sample on quotes for **image**:
+![image](https://github.com/KayongoYongo/PP-Telegram_Quotes_Bot/assets/111020589/893e9c59-2acc-44cb-a579-a6d1e64e2518)
+
+Here is a sample on quotes for a random category such as **computers**:
+![image](https://github.com/KayongoYongo/PP-Telegram_Quotes_Bot/assets/111020589/52a3f3c0-fbd9-42f8-a6a1-9b02fef4558c)
+
+Lastly, here is a sample on providing a category that does not exist:
+![image](https://github.com/KayongoYongo/PP-Telegram_Quotes_Bot/assets/111020589/b1854d63-f159-477a-8b47-61c9e2d00137)
 
 # Authors and acknowledgement
 **Kayongo Samuel Yongo**
