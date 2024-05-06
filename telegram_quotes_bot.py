@@ -114,20 +114,26 @@ def fetch_quotes(message, mode):
     else:
         category_data = get_quotes(mode)
 
-        # retrieve the JSON from the list
-        quoted_data = category_data[0]
+        # Check if data is a list and not empty
+        if isinstance(category_data, list) and category_data:
+            # retrieve the JSON from the list
+            quoted_data = category_data[0]
 
-        # Assign the retrieved data to variables
-        quote = quoted_data.get('quote')
-        author = quoted_data.get('author')
+            # Check if data is a dictionary
+            if isinstance(quoted_data, dict):
+                # Assign the retrieved data to variables
+                quote = quoted_data.get('quote')
+                author = quoted_data.get('author')
 
-        # Handles the case of existing quote and author
-        if quote and author:
-            quote_message = f"*Quote:* {quote}\n*Author:* {author}"
-            bot.send_message(message.chat.id, "Here's the quote and author:")
-            bot.send_message(message.chat.id, quote_message, parse_mode="Markdown")
-        else:
-            bot.send_message(message.chat.id, "Failed to fetch quote data.")
+                # Handles the case of existing quote and author
+                if quote and author:
+                    quote_message = f"*Quote:* {quote}\n*Author:* {author}"
+                    bot.send_message(message.chat.id, "Here's the quote and author:")
+                    bot.send_message(message.chat.id, quote_message, parse_mode="Markdown")
+                else:
+                    bot.send_message(message.chat.id, "Failed to fetch quote data.")
+            else:
+                bot.send_message(message.chat.id, "Failed to fetch quote data.")      
 
 # starts the bot and continuously polls for new messages from users.
 bot.infinity_polling()
